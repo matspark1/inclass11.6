@@ -1,0 +1,94 @@
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .formHolder {
+    width: 900px;
+    padding-top: 20px;
+    h1 {
+      text-align: center;
+    }
+    .formDesc {
+      margin-top: 50px;
+      width: 100%;
+      position: relative;
+      .descBtn {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        color: #fff;
+        font-size: 24px;
+        background-color: #d00d0d;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        cursor: pointer;
+      }
+    }
+    .formInstr {
+      margin-top: 50px;
+      width: 100%;
+      position: relative;
+      .instrBtn {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        color: #fff;
+        font-size: 24px;
+        background-color: #d00d0d;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        cursor: pointer;
+      }
+    }
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+      height: 50px;
+      border: none;
+      border-bottom: 2px solid #000;
+      background-color: rgba($color: #000000, $alpha: 0);
+      padding-left: 10px;
+    }
+  }
+}
+
+.formRecipe {
+  position: relative;
+  .imageBtn {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #d00d0d;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    cursor: pointer;
+  }
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 40px;
+  background-color: #d00d0d;
+  color: #ffff;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
