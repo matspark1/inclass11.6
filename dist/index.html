@@ -8,34 +8,13 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div id="app">
-      <div class="formHolder">
-        <h1>Add your thing today</h1>
-        <div class="formRecipe">
-          <div class="imageBtn">Attach Image</div>
-          <input
-            id="imagePath"
-            type="text"
-            placeholder="Image URL / Image Name"
-          />
-          <input id="itemName" type="text" placeholder="Recipe Name" />
-        </div>
-        <div class="formDesc">
-          <input id="desc0" type="text" placeholder="Description #1" />
-          <input id="desc1" type="text" placeholder="Description #2" />
-          <input id="desc2" type="text" placeholder="Description #3" />
-          <div class="descBtn">+</div>
-        </div>
-        <div class="formInstr">
-          <input id="instr0" type="text" placeholder="Instruction #1" />
-          <input id="instr1" type="text" placeholder="Instruction #2" />
-          <input id="instr2" type="text" placeholder="Instruction #3" />
-          <div class="instrBtn">+</div>
-        </div>
-        <div class="submit btn">Submit Form</div>
-      </div>
-    </div>
+    <nav>
+      <a id="addRecipe" href="#form">Add Recipe</a>
+      <a id="viewRecipe" href="#recipes">Recipes</a>
+    </nav>
+    <div id="app"></div>
     <script type="module" src="lib/jquery-3.7.1.min.js"></script>
+    <script type="module" src="app/model.js"></script>
     <script type="module" src="app/app.js"></script>
   </body>
 </html>

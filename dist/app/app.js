@@ -1,11 +1,20 @@
+import { changePage, addRecipe } from "../app/model.js";
+
 var initalDescCount = 3;
 var initalInstrCount = 3;
-var recipes = [];
+
 function initListeners() {
   formAdders();
+  // NAVIGATION DONT TOUCH
+  $("nav a").on("click", (e) => {
+    e.preventDefault();
+    let btnID = e.currentTarget.id;
+    changePage(btnID);
+  });
+  // NAVIGATION DONT TOUCH
 }
 
-function formAdders() {
+export function formAdders() {
   $(".descBtn").on("click", (e) => {
     initalDescCount++;
     $(".formDesc").append(
@@ -31,17 +40,13 @@ function formAdders() {
 
     newItemObj.descriptions = [];
 
-    console.log(newItemObj);
     $(".formDesc input").each(function (index, data) {
       var value = $(this).val();
-      console.log("this", $(this));
       if (value != "") {
         let keyName = "description" + index;
         let descObj = {};
         descObj[keyName] = value;
         newItemObj.descriptions.push(descObj);
-
-        console.log("desc: " + newItemObj);
       }
     });
 
@@ -54,17 +59,17 @@ function formAdders() {
         let instrObj = {};
         instrObj[keyName] = value;
         newItemObj.instructions.push(instrObj);
-        console.log("instruct: " + newItemObj);
       }
     });
-    if (imagePath != "" && itemName != "") {
-      recipes.push(newItemObj);
-    } else {
-      alert("Please insert an Image and Recipe Name");
-    }
+    addRecipe(newItemObj);
   });
+}
+
+export function addFormListener() {
+  console.log("form listen");
 }
 
 $(document).ready(function () {
   initListeners();
+  changePage("viewRecipe");
 });

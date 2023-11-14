@@ -120,4 +120,63 @@ p {
   cursor: pointer;
 }
 
+nav {
+  height: 50px;
+  width: 100%;
+  background-color: #191919;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.vr {
+  background-color: red;
+  min-height: 200px;
+  width: 900px;
+}
+
+.recipe-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 900px;
+  flex-wrap: wrap;
+}
+
+.recipe {
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 430px;
+  min-height: 30vh;
+  margin-bottom: 30px;
+}
+.recipe .imageHolder img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin-top: 20px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.recipe .titleDesc {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.recipe .descriptions {
+  margin-bottom: 30px;
+}
+.recipe ol,
+.recipe ul {
+  margin-left: 30px;
+}
+
 /*# sourceMappingURL=styles.css.map */
